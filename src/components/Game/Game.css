@@ -9,6 +9,7 @@
 .tip span {
   color: #000000;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .wordContainer {
