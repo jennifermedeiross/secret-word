@@ -6,3 +6,9 @@
   justify-content: center;
   align-items: center;
 }
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 60px;
+  color: #d7f6f2;
+}
