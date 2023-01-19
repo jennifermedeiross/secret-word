@@ -2,7 +2,7 @@
 import './App.css';
 
 // React
-import { useCallback, useEffecr, useState } from 'react';
+import { useCallback, useEffecr, useEffect, useState } from 'react';
 
 // Data
 import { wordsList } from './data/words';
@@ -67,12 +67,30 @@ function App() {
     } else {
       setWrongLetters((actual) => [
         ...actual, normalizedLetter
-      ])
+      ]);
+
+      setGuesses((actual) => actual - 1)
     }
   }
 
+  const clearLettersStates = () => {
+    setGuessedLetters([]);
+    setWrongLetters([]);
+  };
+
+  useEffect(() => {
+    if (guesses === 0) {
+      clearLettersStates();
+
+      setGameStage(stages[2].name);
+    }
+  }, [guesses]);
+
   const retry = () => {
-    setGameStage(stages[0].name)
+    setScore(0);
+    setGuesses(5);
+
+    setGameStage(stages[0].name);
   }
 
   return (

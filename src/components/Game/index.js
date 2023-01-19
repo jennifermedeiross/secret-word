@@ -32,7 +32,7 @@ export const Game = ({
       <h3 className='tip'>
         Dica: <span>{pickedCategory}</span>
       </h3>
-      <p>Você ainda tem {guesses} tentativa(s).</p>
+      <p>Você ainda tem <i>{guesses}</i> tentativa(s).</p>
       <div className="wordContainer">
         {letters.map((letter, i) =>
           guessedLetters.includes(letter) ? (
