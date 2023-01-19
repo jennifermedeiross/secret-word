@@ -4,7 +4,7 @@ export const Game = ({ verifyLetter }) => {
   return (
     <div className='game'>
       <p className='points'>
-        <span>Pontucação atual: 000</span>
+        <span>Pontuação atual: 000</span>
       </p>
       <h1>Adivinhe a palavra</h1>
       <h3 className='tip'>
